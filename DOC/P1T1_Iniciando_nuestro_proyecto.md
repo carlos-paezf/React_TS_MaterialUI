@@ -21,7 +21,7 @@ pnpm dev
 Necesitamos instalar algunas librerías como punto inicial, por lo que ejecutamos el siguiente comando dentro del proyecto:
 
 ```txt
-pnpm i react-router-dom@6 @emotion/react @emotion/style @mui/icons-material @mui/material @babel/core@">=7.0.0 <8.0.0"  @emotion/core@0.x.x
+pnpm i react-router-dom@6 @emotion/react @emotion/styled @mui/icons-material @mui/material @babel/core@">=7.0.0 <8.0.0"  @emotion/core@0.x.x
 ```
 
 ## Consideraciones
