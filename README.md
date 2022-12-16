@@ -12,3 +12,4 @@
 ## Documentación paso a paso
 
 - [Iniciando nuestro proyecto](DOC/P1T1_Iniciando_nuestro_proyecto.md)
+- [Theme Customization](DOC/P2T1_Theme_Customization.md)
