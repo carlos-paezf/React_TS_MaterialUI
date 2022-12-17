@@ -1,12 +1,13 @@
-import { Button, Container } from '@mui/material'
-import './App.css'
+import { FC } from 'react'
+import { BrowserRouter } from 'react-router-dom'
+import { AppRouter } from './Router'
 
 
-const App = () => {
+const App: FC = () => {
     return (
-        <Container maxWidth="xl">
-            <Button variant="contained">Hola Mundo</Button>
-        </Container>
+        <BrowserRouter>
+            <AppRouter />
+        </BrowserRouter>
     )
 }
 
