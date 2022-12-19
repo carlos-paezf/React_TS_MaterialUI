@@ -5,6 +5,7 @@ import { Notification } from '../components'
 
 type ContextProps = {
     getError: ( msg: string ) => void
+    getSuccess: ( msg: string ) => void
 }
 
 
@@ -28,13 +29,24 @@ export const NotificationProvider: FC<{ children: JSX.Element }> = ( { children 
     }
 
     /**
+     * GetSuccess is a function that takes a string and returns a function that takes no arguments and
+     * returns nothing.
+     * @param {string} msg - string - The message to display
+     */
+    const getSuccess = ( msg: string ): void => {
+        setSeverity( "success" )
+        setOpen( true )
+        setMessage( msg )
+    }
+
+    /**
      * When the user clicks the close button, the modal will close.
      */
     const handleClose = (): void => {
         setOpen( false )
     }
 
-    const value = { getError }
+    const value = { getError, getSuccess }
 
     return (
         <NotificationContext.Provider value={ value }>

@@ -1,5 +1,7 @@
 import { Box, Button, Container, Grid, Paper, TextField, Typography } from '@mui/material'
 import { ChangeEvent, FC, FormEvent, useState } from 'react'
+import { useNotification } from '../../context/notification.context'
+import { LoginValidate } from '../../helpers'
 
 
 type LoginType = {
@@ -9,6 +11,8 @@ type LoginType = {
 
 
 export const LoginPage: FC = () => {
+    const { getError, getSuccess } = useNotification()
+
     const [ loginData, setLoginData ] = useState<LoginType>( {
         email: '',
         password: ''
@@ -38,7 +42,13 @@ export const LoginPage: FC = () => {
      */
     const handleSubmit = ( e: FormEvent ): void => {
         e.preventDefault()
-        console.table( { ...loginData } )
+        LoginValidate.validate( loginData )
+            .then( () => {
+                getSuccess( JSON.stringify( { ...loginData } ) )
+            } )
+            .catch( error => {
+                getError( error.message )
+            } )
     }
 
     return (
@@ -62,15 +72,13 @@ export const LoginPage: FC = () => {
                                 label="Correo electrónico"
                                 sx={ { mt: 2, mb: 1 } }
                                 margin="normal"
-                                fullWidth
-                                required />
+                                fullWidth />
                             <TextField name="password" value={ password } onChange={ handleChangeData }
                                 type="password"
                                 label="Contraseña"
                                 sx={ { mt: 1, mb: 2 } }
                                 margin="normal"
-                                fullWidth
-                                required />
+                                fullWidth />
 
                             <Button type="submit"
                                 variant="contained"
