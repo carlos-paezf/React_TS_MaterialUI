@@ -16,3 +16,4 @@
 - [Creación de rutas y construcción de NavBar](DOC/P3T1_Creacion_rutas_construccion_NavBar.md)
 - [Login Page y Manejo de Formularios](DOC/P4T1_Login_Page_Manejo_Formularios.md)
 - [Creando notificaciones con Context - Parte 1](DOC/P5T1_Creando_notificaciones_con_Context.md)
+- [Notificaciones de validación con Yup - Parte 2](DOC/P5T2_Notificaciones_validacion_Yup.md)]
