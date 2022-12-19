@@ -29,6 +29,20 @@ const theme = createTheme( {
                     letterSpacing: ".75px"
                 }
             }
+        },
+        MuiAlert: {
+            defaultProps: {
+                style: {
+                    borderRadius: ".8em",
+                    fontSize: "1em",
+                }
+            },
+            styleOverrides: {
+                standardError: {
+                    border: `1px solid ${ ThemePalette.ERROR_MAIN }`,
+                    background: ThemePalette.BG_ERROR_MAIN
+                }
+            }
         }
     }
 } )

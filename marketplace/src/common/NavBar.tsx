@@ -10,7 +10,7 @@ const NavBar: FC = () => {
                 className='navbar__glassmorphism'
                 sx={ {
                     background: "rgba(0, 0, 0, 0.5)",
-                    boxShadow: `0 1px 15px 0 ${ ThemePalette.LIME }`
+                    boxShadow: `0 1px 5px 0 ${ ThemePalette.LIGHT_LIME }`
                 } }>
                 <Toolbar>
                     <Container maxWidth="xl">

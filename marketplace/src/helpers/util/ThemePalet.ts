@@ -1,5 +1,8 @@
 export enum ThemePalette {
     BG = "#12181b",
     LIME = "#C8FA5F",
-    FONT_GLOBAL = "'Libre Franklin', monospace"
+    LIGHT_LIME = "RGBA(200, 250, 95, .5)",
+    FONT_GLOBAL = "'Libre Franklin', monospace",
+    ERROR_MAIN = "#F44336",
+    BG_ERROR_MAIN = "RGBA(224, 67, 54, .5)"
 }

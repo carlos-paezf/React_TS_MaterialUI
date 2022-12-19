@@ -1,14 +1,17 @@
 import { FC } from 'react'
 import { BrowserRouter } from 'react-router-dom'
-import { AppRouter } from './Router'
 import "./App.css"
+import { NotificationProvider } from './context/notification.context'
+import { AppRouter } from './Router'
 
 
 const App: FC = () => {
     return (
-        <BrowserRouter>
-            <AppRouter />
-        </BrowserRouter>
+        <NotificationProvider>
+            <BrowserRouter>
+                <AppRouter />
+            </BrowserRouter>
+        </NotificationProvider>
     )
 }
 
