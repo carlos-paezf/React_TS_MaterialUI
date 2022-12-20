@@ -21,3 +21,4 @@
 - [Cómo conectarnos a una API con Axios](DOC/P7T1_Como_conectarnos_API_Axios.md)
 - [Detalles de personajes con Card Component](DOC/P8T1_Detalles_personajes_Card_Component.md)
 - [Paginación de Personajes](DOC/P9T1_Paginacion_Personajes.md)
+- [Página por personaje (useParams)](DOC/P10T1_Pagina_Personaje_useParams.md)
