@@ -22,3 +22,4 @@
 - [Detalles de personajes con Card Component](DOC/P8T1_Detalles_personajes_Card_Component.md)
 - [Paginación de Personajes](DOC/P9T1_Paginacion_Personajes.md)
 - [Página por personaje (useParams)](DOC/P10T1_Pagina_Personaje_useParams.md)
+- [Navegación (useNavigate)](DOC/P11T1_Navegacion_useNavigate.md)
