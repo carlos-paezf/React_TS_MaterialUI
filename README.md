@@ -23,3 +23,4 @@
 - [Paginación de Personajes](DOC/P9T1_Paginacion_Personajes.md)
 - [Página por personaje (useParams)](DOC/P10T1_Pagina_Personaje_useParams.md)
 - [Navegación (useNavigate)](DOC/P11T1_Navegacion_useNavigate.md)
+- [Redux - Introducción a redux-toolkit](DOC/P12T1_Redux_Introduccion_redux-toolkit.md)
