@@ -1,12 +1,15 @@
 import { AppBar, Box, Button, Container, Grid, Stack, Toolbar, Typography } from '@mui/material'
 import { FC } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { ThemePalette } from '../helpers/util'
 
 
 const NavBar: FC = () => {
+    const navigate = useNavigate()
+
     return (
         <Box sx={ { flexGrow: 1 } }>
-            <AppBar position='fixed'
+            <AppBar position='sticky'
                 className='navbar__glassmorphism'
                 sx={ {
                     background: "rgba(0, 0, 0, 0.5)",
@@ -21,7 +24,7 @@ const NavBar: FC = () => {
                             <Grid item>
                                 <Stack direction="row" spacing={ 2 }>
                                     <Button variant='outlined'>Register</Button>
-                                    <Button variant='contained'>Login</Button>
+                                    <Button variant='contained' onClick={ () => navigate( 'login' ) }>Login</Button>
                                 </Stack>
                             </Grid>
                         </Grid>
