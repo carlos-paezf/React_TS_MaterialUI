@@ -7,7 +7,7 @@ export const CardComponent: FC<Character> = ( { image, name, status, species } )
     return (
         <Card sx={ { maxWidth: "345px" } }>
             <CardMedia component="img"
-                height="195"
+                height="300"
                 image={ image }
                 alt={ name } />
 
