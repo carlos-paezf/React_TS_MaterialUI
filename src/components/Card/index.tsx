@@ -1,9 +1,12 @@
 import { Button, Card, CardActions, CardContent, CardMedia, Divider, Typography } from "@mui/material"
 import { FC } from "react"
+import { useNavigate } from "react-router-dom"
 import { Character } from "../../types"
 
 
-export const CardComponent: FC<Character> = ( { image, name, status, species } ) => {
+export const CardComponent: FC<Character> = ( { id, image, name, status, species } ) => {
+    const navigate = useNavigate()
+
     return (
         <Card sx={ { maxWidth: "345px" } }>
             <CardMedia component="img"
@@ -19,7 +22,7 @@ export const CardComponent: FC<Character> = ( { image, name, status, species } )
             </CardContent>
 
             <CardActions>
-                <Button variant="contained" fullWidth>Ver más</Button>
+                <Button variant="contained" onClick={ () => navigate( `/${ id }` ) } fullWidth>Ver más</Button>
             </CardActions>
         </Card>
     )
