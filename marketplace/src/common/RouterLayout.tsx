@@ -7,7 +7,9 @@ export const RouterLayout: FC = () => {
     return (
         <>
             <NavBar />
-            <Outlet />
+            <div style={ { marginTop: "3rem" } }>
+                <Outlet />
+            </div>
         </>
     )
 }

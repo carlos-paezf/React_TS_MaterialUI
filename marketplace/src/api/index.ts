@@ -1,1 +1,1 @@
-export { characters } from "./characters"
+export { getAllCharacters, getCharacterByID } from "./characters"

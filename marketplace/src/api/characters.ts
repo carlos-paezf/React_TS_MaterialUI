@@ -10,13 +10,16 @@ type getParams = {
 }
 
 
-export const characters = {
-    getAll: async ( { page = 1 }: getParams ): Promise<CharactersResponse> => {
+const characters = {
+    getAllCharacters: async ( { page = 1 }: getParams ): Promise<CharactersResponse> => {
         const { data } = await instance.get<CharactersResponse>( endpoint, { params: { page } } )
         return data
     },
-    getByID: async ( id: number ): Promise<Character> => {
+    getCharacterByID: async ( id: number ): Promise<Character> => {
         const { data } = await instance.get<Character>( `${ endpoint }/${ id }` )
         return data
     }
 }
+
+
+export const { getAllCharacters, getCharacterByID } = characters

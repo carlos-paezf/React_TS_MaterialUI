@@ -9,7 +9,7 @@ const NavBar: FC = () => {
 
     return (
         <Box sx={ { flexGrow: 1 } }>
-            <AppBar position='sticky'
+            <AppBar position='fixed'
                 className='navbar__glassmorphism'
                 sx={ {
                     background: "rgba(0, 0, 0, 0.5)",
