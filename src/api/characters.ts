@@ -15,7 +15,8 @@ const characters = {
         const { data } = await instance.get<CharactersResponse>( endpoint, { params: { page } } )
         return data
     },
-    getCharacterByID: async ( id: number ): Promise<Character> => {
+    getCharacterByID: async ( id: number | undefined ): Promise<Character> => {
+        if ( !id ) throw new Error( 'El id es requerido' )
         const { data } = await instance.get<Character>( `${ endpoint }/${ id }` )
         return data
     }
