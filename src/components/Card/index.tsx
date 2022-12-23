@@ -1,4 +1,4 @@
-import { Button, Card, CardActions, CardContent, CardMedia, Divider, Typography } from "@mui/material"
+import { Button, Card, CardActions, CardContent, CardMedia, Divider, Grid, Typography } from "@mui/material"
 import { FC } from "react"
 import { useNavigate } from "react-router-dom"
 import { Character } from "../../types"
@@ -23,6 +23,7 @@ export const CardComponent: FC<Character> = ( { id, image, name, status, species
 
             <CardActions>
                 <Button variant="contained" onClick={ () => navigate( `/${ id }` ) } fullWidth>Ver más</Button>
+                <Button variant="outlined" color="secondary" fullWidth disabled>Add to cart</Button>
             </CardActions>
         </Card>
     )
