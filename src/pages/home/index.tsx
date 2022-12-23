@@ -41,7 +41,7 @@ export const HomePage: FC = () => {
                         ? <div>No hay resultados</div>
                         : <Grid container spacing={ 2 } direction="row" sx={ { my: 3 } }>
                             { characters.map( e => (
-                                <Grid item xs={ 3 }>
+                                <Grid item xs={ 3 } key={ e.name }>
                                     <CardComponent key={ e.id } { ...e } />
                                 </Grid>
                             ) ) }
