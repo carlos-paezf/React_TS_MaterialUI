@@ -24,3 +24,4 @@
 - [Página por personaje (useParams)](DOC/P10T1_Pagina_Personaje_useParams.md)
 - [Navegación (useNavigate)](DOC/P11T1_Navegacion_useNavigate.md)
 - [Redux - Introducción a redux-toolkit](DOC/P12T1_Redux_Introduccion_redux-toolkit.md)
+- [Redux - Lógica de agregar y remover del carrito](DOC/P13T1_Redux_Logica_agregar_remover_del_carrito.md)
