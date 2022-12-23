@@ -254,6 +254,6 @@ Si ingresamos al navegador y usamos la extensión Redux DevTools, podremos obser
 
 ___
 
-| Anterior                                                      |                        | Siguiente                                                     |
-| ------------------------------------------------------------- | ---------------------- | ------------------------------------------------------------- |
-| [Navegación (useNavigate)](./P11T1_Navegacion_useNavigate.md) | [Readme](../README.md) | [Navegación (useNavigate)](./P11T1_Navegacion_useNavigate.md) |
+| Anterior                                                      |                        | Siguiente                                                                                              |
+| ------------------------------------------------------------- | ---------------------- | ------------------------------------------------------------------------------------------------------ |
+| [Navegación (useNavigate)](./P11T1_Navegacion_useNavigate.md) | [Readme](../README.md) | [Redux - Lógica de agregar y remover del carrito](./P13T1_Redux_Logica_agregar_remover_del_carrito.md) |
