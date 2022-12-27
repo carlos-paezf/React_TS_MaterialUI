@@ -25,3 +25,4 @@
 - [Navegación (useNavigate)](DOC/P11T1_Navegacion_useNavigate.md)
 - [Redux - Introducción a redux-toolkit](DOC/P12T1_Redux_Introduccion_redux-toolkit.md)
 - [Redux - Lógica de agregar y remover del carrito](DOC/P13T1_Redux_Logica_agregar_remover_del_carrito.md)
+- [Redux - Trabajando con el carrito](DOC/P14T1_Redux_Trabajando_con_el_carrito.md)
