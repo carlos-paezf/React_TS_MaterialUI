@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit"
+import { getItem } from "../../helpers/util/localStorage"
 
 
 interface CartAddState {
@@ -13,7 +14,7 @@ interface CartRemoveState {
 }
 
 
-const initialState: CartAddState[] = []
+const initialState: CartAddState[] = getItem( "cart" ) || []
 
 
 export const cartSlice = createSlice( {

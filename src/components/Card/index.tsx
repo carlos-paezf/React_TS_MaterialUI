@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom"
 import { Character } from "../../types"
 import { useAppDispatch, useAppSelector } from '../../redux/hooks'
 import { addToCart } from "../../redux/slices/cart.slice"
+import { setItem } from "../../helpers/util/localStorage"
 
 
 export const CardComponent: FC<Character> = ( { id, image, name, status, species, origin } ) => {
@@ -15,6 +16,7 @@ export const CardComponent: FC<Character> = ( { id, image, name, status, species
 
     useEffect( () => {
         setDisableBtn( itemExist.some( item => item.id === id ) )
+        setItem( 'cart', itemExist )
     }, [ itemExist, id ] )
 
     const handleAddToCart = () => {
