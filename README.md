@@ -27,3 +27,4 @@
 - [Redux - Lógica de agregar y remover del carrito](DOC/P13T1_Redux_Logica_agregar_remover_del_carrito.md)
 - [Redux - Trabajando con el carrito](DOC/P14T1_Redux_Trabajando_con_el_carrito.md)
 - [Redux - Store en el Local Storage](DOC/P15T1_Redux_Store_Local_Storage.md)
+- [Formik: Validación eficiente](DOC/P16T1_Formik_Validacion_eficiente.md)
