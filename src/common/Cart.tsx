@@ -3,6 +3,7 @@ import { Box, Divider, Drawer, IconButton, Stack, Typography } from "@mui/materi
 import { FC } from "react"
 import { HorizontalCardComponent } from "../components"
 import { ThemePalette } from "../helpers/util"
+import { useAppSelector } from "../redux/hooks"
 import { Character } from "../types"
 
 
@@ -13,12 +14,12 @@ type CartComponentProps = {
 
 
 export const CartComponent: FC<CartComponentProps> = ( { open, handleStateViewDrawer } ) => {
-    const items: Character[] = []
+    const items = useAppSelector( ( state ) => state.cartReducer )
 
     return (
         <Drawer anchor="right" open={ open } className='navbar__glassmorphism'
             sx={ {
-                background: "rgba(0, 0, 0, 0.5)",
+                background: "rgba(0, 0, 0, .1)",
                 boxShadow: `0 1px 5px 0 ${ ThemePalette.LIGHT_LIME }`
             } }>
             <Box sx={ { width: '25em', p: 2 } }>
@@ -36,7 +37,7 @@ export const CartComponent: FC<CartComponentProps> = ( { open, handleStateViewDr
 
                 {
                     ( !items || !items.length )
-                        ? <Typography sx={ { m: 2 } }>'No hay elementos en el carrito'</Typography>
+                        ? <Typography sx={ { m: 2 } }>No hay elementos en el carrito =(</Typography>
                         : items.map( character => <HorizontalCardComponent key={ character.id } { ...character } /> )
                 }
             </Box>

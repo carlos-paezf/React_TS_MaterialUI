@@ -3,11 +3,14 @@ import { AppBar, Badge, Box, Button, Container, Divider, Drawer, Grid, IconButto
 import { FC, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { ThemePalette } from '../helpers/util'
+import { useAppSelector } from '../redux/hooks'
 import { CartComponent } from './Cart'
+import { ShoppingCartComponent } from '../components/ShoppingCart/index'
 
 
 const NavBar: FC = () => {
     const navigate = useNavigate()
+    const itemsCount = useAppSelector( state => state.cartReducer ).length
 
     const [ open, setOpen ] = useState<boolean>( false )
 
@@ -30,12 +33,7 @@ const NavBar: FC = () => {
             <Grid container direction="row" justifyContent="center" alignItems="center" sx={ { my: 5 } }>
                 <Grid item sx={ { mx: 2, width: "100%" } }>
                     <Stack direction="column" spacing={ 4 }>
-                        <IconButton color="primary" onClick={ handleStateViewDrawer }>
-                            <Typography>Cart items: &nbsp;</Typography>
-                            <Badge color="error" badgeContent={ 2 }>
-                                <ShoppingCartOutlinedIcon />
-                            </Badge>
-                        </IconButton>
+                        <ShoppingCartComponent handleStateViewDrawer={ handleStateViewDrawer } itemsCount={ itemsCount } />
                         <Button variant='outlined'>Register</Button>
                         <Button variant='contained' onClick={ () => navigate( 'login' ) }>Login</Button>
                     </Stack>
@@ -71,11 +69,7 @@ const NavBar: FC = () => {
 
                             <Grid item>
                                 <Stack direction="row" spacing={ 2 }>
-                                    <IconButton color="primary" onClick={ handleStateViewDrawer }>
-                                        <Badge color="error" badgeContent={ 2 }>
-                                            <ShoppingCartOutlinedIcon />
-                                        </Badge>
-                                    </IconButton>
+                                    <ShoppingCartComponent handleStateViewDrawer={ handleStateViewDrawer } itemsCount={ itemsCount } />
                                     <Button variant='outlined'>Register</Button>
                                     <Button variant='contained' onClick={ () => navigate( 'login' ) }>Login</Button>
                                 </Stack>
