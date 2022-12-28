@@ -40,7 +40,7 @@ export const CharacterPage: FC = () => {
         <Box sx={ { width: "100%", pt: 10 } }>
             <Container maxWidth="xl">
                 <Grid container columnSpacing={ 2 }>
-                    <Grid item xs={ 6 }>
+                    <Grid item xs={ 12 } md={ 6 }>
                         <Stack direction="row" alignItems="center">
                             <IconButton color='secondary' onClick={ () => navigate( -1 ) }>
                                 <ArrowBackIosNew />
@@ -67,7 +67,7 @@ export const CharacterPage: FC = () => {
                         <Typography variant='h6' sx={ { my: 2 } }>Cantidad de episodios en los que aparece: { episode.length }</Typography>
                     </Grid>
 
-                    <Grid item xs={ 6 }>
+                    <Grid item xs={ 12 } md={ 6 }>
                         <img src={ image } alt={ name } style={ { width: "100%", borderRadius: '.5em' } } />
                     </Grid>
                 </Grid>

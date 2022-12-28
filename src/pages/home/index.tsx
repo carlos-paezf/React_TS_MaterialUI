@@ -27,7 +27,7 @@ export const HomePage: FC = () => {
     }
 
     return (
-        <Container maxWidth="xl">
+        <Container maxWidth="xl" sx={ { py: 1 } }>
             <HeaderComponent title='Rick & Morty' description='Listado de personajes de la serie animada Rick & Morty' element={
                 <Button variant="contained" fullWidth>Ver documentación de la API</Button>
             } />
@@ -41,7 +41,7 @@ export const HomePage: FC = () => {
                         ? <div>No hay resultados</div>
                         : <Grid container spacing={ 2 } direction="row" sx={ { my: 3 } }>
                             { characters.map( e => (
-                                <Grid item xs={ 3 } key={ e.name }>
+                                <Grid item xs={ 12 } sm={ 6 } md={ 4 } lg={ 3 } xl={ 3 } key={ e.name } sx={ { display: "flex", justifyContent: "center", alignItems: "center" } }>
                                     <CardComponent key={ e.id } { ...e } />
                                 </Grid>
                             ) ) }
