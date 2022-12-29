@@ -29,3 +29,4 @@
 - [Redux - Store en el Local Storage](DOC/P15T1_Redux_Store_Local_Storage.md)
 - [Formik: Validación eficiente](DOC/P16T1_Formik_Validacion_eficiente.md)
 - [Lazy load y Suspense](DOC/P17T1_Lazy_load_Suspense.md)
+- [Deploy con CircleCI y Vercel](DOC/P18T1_Deploy_CircleCI_Vercel.md)
