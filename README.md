@@ -28,3 +28,4 @@
 - [Redux - Trabajando con el carrito](DOC/P14T1_Redux_Trabajando_con_el_carrito.md)
 - [Redux - Store en el Local Storage](DOC/P15T1_Redux_Store_Local_Storage.md)
 - [Formik: Validación eficiente](DOC/P16T1_Formik_Validacion_eficiente.md)
+- [Lazy load y Suspense](DOC/P17T1_Lazy_load_Suspense.md)
