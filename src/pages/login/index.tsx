@@ -1,4 +1,5 @@
 import { Box, Button, Container, Grid, Paper, TextField, Typography } from '@mui/material'
+import { useFormik } from 'formik'
 import { ChangeEvent, FC, FormEvent, useState } from 'react'
 import { useNotification } from '../../context/notification.context'
 import { LoginValidate } from '../../helpers'
@@ -11,45 +12,20 @@ type LoginType = {
 
 
 export const LoginPage: FC = () => {
-    const { getError, getSuccess } = useNotification()
+    const { getSuccess } = useNotification()
 
-    const [ loginData, setLoginData ] = useState<LoginType>( {
-        email: '',
-        password: ''
+    const { handleSubmit, handleChange, values, touched, errors } = useFormik<LoginType>( {
+        initialValues: {
+            email: '',
+            password: ''
+        },
+        validationSchema: LoginValidate,
+        onSubmit: ( values ) => {
+            getSuccess( JSON.stringify( { ...values }, null, 4 ) )
+        }
     } )
 
-    const { email, password } = loginData
-
-    /**
-     * The function takes an event as an argument, and then uses the event's target to set the state of
-     * the loginData object.
-     * @param e - ChangeEvent<HTMLInputElement>
-     */
-    const handleChangeData = ( e: ChangeEvent<HTMLInputElement> ): void => {
-        const { name, value } = e.target
-        setLoginData( {
-            ...loginData,
-            [ name ]: value
-        } )
-    }
-
-    /**
-     * "The function handleSubmit takes an event of type FormEvent and returns nothing."
-     * 
-     * The function handleSubmit takes an event of type FormEvent and returns nothing.
-     * @param {FormEvent} e - FormEvent - This is the event that is triggered when the form is
-     * submitted.
-     */
-    const handleSubmit = ( e: FormEvent ): void => {
-        e.preventDefault()
-        LoginValidate.validate( loginData )
-            .then( () => {
-                getSuccess( JSON.stringify( { ...loginData } ) )
-            } )
-            .catch( error => {
-                getError( error.message )
-            } )
-    }
+    const { email, password } = values
 
     return (
         <Container maxWidth="sm">
@@ -67,13 +43,19 @@ export const LoginPage: FC = () => {
                         </Typography>
 
                         <Box component="form" onSubmit={ handleSubmit }>
-                            <TextField name="email" value={ email } onChange={ handleChangeData }
+                            <TextField name="email"
+                                value={ email } onChange={ handleChange }
+                                error={ touched.email && Boolean( errors.email ) }
+                                helperText={ touched.email && errors.email }
                                 type="email"
                                 label="Correo electrónico"
                                 sx={ { mt: 2, mb: 1 } }
                                 margin="normal"
                                 fullWidth />
-                            <TextField name="password" value={ password } onChange={ handleChangeData }
+                            <TextField name="password"
+                                value={ password } onChange={ handleChange }
+                                error={ touched.password && Boolean( errors.password ) }
+                                helperText={ touched.password && errors.password }
                                 type="password"
                                 label="Contraseña"
                                 sx={ { mt: 1, mb: 2 } }
