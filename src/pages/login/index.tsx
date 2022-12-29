@@ -11,7 +11,7 @@ type LoginType = {
 }
 
 
-export const LoginPage: FC = () => {
+const LoginPage: FC = () => {
     const { getSuccess } = useNotification()
 
     const { handleSubmit, handleChange, values, touched, errors } = useFormik<LoginType>( {
@@ -75,3 +75,6 @@ export const LoginPage: FC = () => {
         </Container>
     )
 }
+
+
+export default LoginPage

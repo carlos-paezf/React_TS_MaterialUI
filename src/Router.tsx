@@ -1,9 +1,7 @@
-import { FC } from "react"
+import { FC, Suspense } from 'react'
 import { Route, Routes } from "react-router-dom"
 import { RouterLayout } from "./common/RouterLayout"
-import { CharacterPage } from "./pages/character"
-import { HomePage } from "./pages/home"
-import { LoginPage } from "./pages/login"
+import { HomePage, CharacterPage, LoginPage } from "./pages"
 
 
 export const AppRouter: FC = () => {
@@ -11,9 +9,17 @@ export const AppRouter: FC = () => {
         <Routes>
             <Route path="/" element={ <RouterLayout /> }>
                 <Route path="/" element={ <HomePage /> } />
-                <Route path="/:characterId" element={ <CharacterPage /> } />
+                <Route path="/:characterId" element={
+                    <Suspense fallback={ "Cargando" }>
+                        <CharacterPage />
+                    </Suspense>
+                } />
             </Route>
-            <Route path="/login" element={ <LoginPage /> } />
+            <Route path="/login" element={
+                <Suspense fallback={ "Cargando" }>
+                    <LoginPage />
+                </Suspense>
+            } />
         </Routes>
     )
 }

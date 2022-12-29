@@ -7,7 +7,7 @@ import { Character } from '../../types'
 import { Status } from '../../types/characters'
 
 
-export const CharacterPage: FC = () => {
+const CharacterPage: FC = () => {
     const { characterId } = useParams()
     const navigate = useNavigate()
 
@@ -75,3 +75,6 @@ export const CharacterPage: FC = () => {
         </Box>
     )
 }
+
+
+export default CharacterPage
