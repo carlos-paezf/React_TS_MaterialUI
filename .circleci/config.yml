@@ -31,7 +31,7 @@ jobs:
             - checkout
             - run:
                 name: Install Vercel CLI
-                command: 'sudo pnpm install -g vercel'
+                command: 'sudo npm install -g vercel'
             - attach_workspace:
                 at: .
             - run:
