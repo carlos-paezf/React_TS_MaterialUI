@@ -1,0 +1,56 @@
+version: 2.1
+
+jobs:
+    install-dependencies:
+        working_directory: ~/repo
+        docker:
+            - image: cimg/node:16.13.2
+        steps:
+            - checkout
+            - run:
+                name: Update or install NPM
+                command: 'sudo npm install -g npm'
+            - run:
+                name: Install pnpm
+                command: 'sudo npm install -g pnpm'
+            - restore_cache:
+                key: app-{{ checksum "package-lock.json" }}
+            - run:
+                name: Install Dependencies
+                command: pnpm install
+            - persist_to_workspace:
+                root: .
+                paths:
+                    - .
+    vercel-deploy:
+        build:
+        working_directory: ~/repo
+        docker:
+            - image: cimg/node:16.13.2
+        steps:
+            - checkout
+            - run:
+                name: Install Vercel CLI
+                command: 'sudo npm install -g vercel'
+            - attach_workspace:
+                at: .
+            - run:
+                name: Vercel Prod Deploy
+                command: vercel --prod --build-env REACT_APP_BASEURL=https://rickandmorty.com/api --name $VERCEL_PROJECT_NAME --scope $VERCEL_SCOPE --token=$VERCEL_TOKEN --yes
+
+workflows:
+    version: 2
+    deploy-reactapp:
+        jobs:
+            - install-dependencies:
+                filters:
+                    branches:
+                        only:
+                            - develop
+            - vercel-deploy:
+                requires:
+                    - install-dependencies
+                filters:
+                    branches:
+                        only:
+                            - develop
