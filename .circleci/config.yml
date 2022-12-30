@@ -14,7 +14,7 @@ jobs:
                 name: Install pnpm
                 command: 'sudo npm install -g pnpm'
             - restore_cache:
-                key: app-{{ checksum "package-lock.json" }}
+                key: app-{{ checksum "pnpm-lock.yaml" }}
             - run:
                 name: Install Dependencies
                 command: pnpm install
