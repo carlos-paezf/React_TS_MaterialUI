@@ -8,20 +8,20 @@ jobs:
         steps:
             - checkout
             - run:
-                name: Update or install NPM
-                command: 'sudo npm install -g npm'
+                  name: Update or install NPM
+                  command: "sudo npm install -g npm"
             - run:
-                name: Install pnpm
-                command: 'sudo npm install -g pnpm'
+                  name: Install pnpm
+                  command: "sudo npm install -g pnpm"
             - restore_cache:
-                key: app-{{ checksum "pnpm-lock.yaml" }}
+                  key: app-{{ checksum "pnpm-lock.yaml" }}
             - run:
-                name: Install Dependencies
-                command: pnpm install
+                  name: Install Dependencies
+                  command: pnpm install
             - persist_to_workspace:
-                root: .
-                paths:
-                    - .
+                  root: .
+                  paths:
+                      - .
     vercel-deploy:
         build:
         working_directory: ~/repo
@@ -30,27 +30,27 @@ jobs:
         steps:
             - checkout
             - run:
-                name: Install Vercel CLI
-                command: 'sudo npm install -g vercel'
+                  name: Install Vercel CLI
+                  command: "sudo npm install -g vercel"
             - attach_workspace:
-                at: .
+                  at: .
             - run:
-                name: Vercel Prod Deploy
-                command: vercel --prod --build-env REACT_APP_BASEURL=https://rickandmorty.com/api --name $VERCEL_PROJECT_NAME --scope $VERCEL_SCOPE --token=$VERCEL_TOKEN --yes
+                  name: Vercel Prod Deploy
+                  command: vercel --prod --build-env VITE_APP_BASEURL=https://rickandmortyapi.com/api --name $VERCEL_PROJECT_NAME --scope $VERCEL_SCOPE --token=$VERCEL_TOKEN --yes
 
 workflows:
     version: 2
     deploy-reactapp:
         jobs:
             - install-dependencies:
-                filters:
-                    branches:
-                        only:
-                            - develop
+                  filters:
+                      branches:
+                          only:
+                              - develop
             - vercel-deploy:
-                requires:
-                    - install-dependencies
-                filters:
-                    branches:
-                        only:
-                            - develop
+                  requires:
+                      - install-dependencies
+                  filters:
+                      branches:
+                          only:
+                              - develop
