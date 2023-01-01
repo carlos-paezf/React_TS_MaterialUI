@@ -1,6 +1,14 @@
-# ReactJS + TypeScript + Material UI + Redux
+# [ReactJS + TypeScript + Material UI + Redux](https://ferrerrickandmorty.vercel.app/)
 
 [![wakatime](https://wakatime.com/badge/user/8ef73281-6d0a-4758-af11-fd880ca3009c/project/661a9ada-d031-4328-80fa-73074a6025f1.svg?style=for-the-badge)](https://wakatime.com/badge/user/8ef73281-6d0a-4758-af11-fd880ca3009c/project/661a9ada-d031-4328-80fa-73074a6025f1)
+![vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
+![react](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![ts](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![MaterialUI](https://img.shields.io/badge/Material%20UI-007FFF?style=for-the-badge&logo=mui&logoColor=white)
+![redux](https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white)
+![circleci](https://img.shields.io/badge/circleci-343434?style=for-the-badge&logo=circleci&logoColor=white)
+![github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
+![vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
 ## Tecnologías a implementar
 
@@ -30,3 +38,7 @@
 - [Formik: Validación eficiente](DOC/P16T1_Formik_Validacion_eficiente.md)
 - [Lazy load y Suspense](DOC/P17T1_Lazy_load_Suspense.md)
 - [Deploy con CircleCI y Vercel](DOC/P18T1_Deploy_CircleCI_Vercel.md)
+
+## Enlace al proyecto en vercel
+
+[Ferrer - Rick & Morty](https://ferrerrickandmorty.vercel.app/)
