@@ -1,6 +1,10 @@
 # [ReactJS + TypeScript + Material UI + Redux](https://ferrerrickandmorty.vercel.app/)
 
 [![wakatime](https://wakatime.com/badge/user/8ef73281-6d0a-4758-af11-fd880ca3009c/project/661a9ada-d031-4328-80fa-73074a6025f1.svg?style=for-the-badge)](https://wakatime.com/badge/user/8ef73281-6d0a-4758-af11-fd880ca3009c/project/661a9ada-d031-4328-80fa-73074a6025f1)
+
+## Tecnologías a implementar
+
+![node](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
 ![react](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![ts](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
@@ -10,12 +14,14 @@
 ![github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
 ![vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
-## Tecnologías a implementar
-
 - ***Node v18.12.1***
-- ***React*** con template de *TypeScript*.
 - ***Vite*** es una herramienta de compilación que tiene como objetivo proporcionar una experiencia de desarrollo más rápida y ágil para proyectos web modernos.
+- ***React*** con template de *TypeScript*.
 - ***pnpm*** es un manejador de paquetes de node que permite ahorrar espacio en el disco.
+- ***Material UI*** ofrece un conjunto de herramientas para ser incluidas de manera fácil en un proyecto de React.
+- ***Redux*** mantiene un contenedor de estado global predecible para aplicaciones de JS o TS.
+- ***CircleCI*** es una plataforma que simplifica la Integración Continua (Continuous Integration - CI) y el Despliegue Continuo (Continuous Deploy - CD).
+- ***Vercel*** es una plataforma para el despliegue y alojamiento de aplicaciones frontend, que permite la publicación de proyectos web mediante un sistema de desarrollo e CI.
 
 ## Documentación paso a paso
 
